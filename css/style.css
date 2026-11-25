@@ -1,4 +1,310 @@
-/* Estilos do Aproveita Aí — mobile first:
-   escreva primeiro o layout do celular e use media queries para telas maiores. */
+:root {
+	--verde-escuro: #1F4D2B;
+	--verde: #2E7D3E;
+	--laranja: #B84A00;
+	--amarelo: #F2B84B;
+	--creme: #FFF9EF;
+	--areia: #F3ECDD;
+	--texto: #2B2B2B;
+	--texto-claro: #5A5A52;
+	--borda: #CFC6B2;
+}
 
-/* @media (min-width: 768px) { } */
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 1.5;
+	color: var(--texto);
+	background: var(--creme);
+}
+
+h1, h2, h3 {
+	color: var(--verde-escuro);
+	margin: 0 0 10px;
+}
+
+h1 { font-size: 28px; }
+h2 { font-size: 22px; margin-top: 30px; }
+h3 { font-size: 18px; }
+
+a {
+	color: var(--laranja);
+}
+
+a:focus, button:focus, input:focus {
+	outline: 3px solid var(--amarelo);
+}
+
+/* cabeçalho e menu */
+header {
+	background: var(--verde-escuro);
+	padding: 10px 16px;
+}
+
+.logo {
+	color: white;
+	font-size: 20px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+nav {
+	margin-top: 8px;
+}
+
+nav a {
+	display: inline-block;
+	color: white;
+	text-decoration: none;
+	padding: 4px 10px;
+	border-radius: 20px;
+	font-size: 15px;
+}
+
+nav a:hover,
+nav a.ativo {
+	background: var(--verde);
+}
+
+/* conteúdo */
+main {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 10px 16px 40px;
+}
+
+section {
+	margin-bottom: 20px;
+}
+
+.fonte {
+	font-size: 14px;
+	color: var(--texto-claro);
+}
+
+.aviso {
+	background: var(--areia);
+	border-left: 5px solid var(--amarelo);
+	padding: 12px 16px;
+	margin: 20px 0;
+}
+
+/* botões */
+.botao,
+button {
+	display: inline-block;
+	font-size: 16px;
+	font-weight: bold;
+	text-decoration: none;
+	padding: 10px 22px;
+	border: 2px solid var(--verde);
+	border-radius: 25px;
+	background: var(--verde);
+	color: white;
+	cursor: pointer;
+}
+
+.botao:hover,
+button:hover {
+	background: var(--verde-escuro);
+	border-color: var(--verde-escuro);
+}
+
+.botao-claro {
+	background: white;
+	color: var(--verde-escuro);
+	border-color: var(--verde-escuro);
+}
+
+.botao-claro:hover {
+	background: var(--areia);
+	color: var(--verde-escuro);
+}
+
+/* início */
+.inicio {
+	background: var(--areia);
+	border-radius: 16px;
+	padding: 24px 16px;
+	margin-top: 20px;
+}
+
+.inicio-texto p {
+	color: var(--texto-claro);
+}
+
+.imagem {
+	height: 180px;
+	margin-top: 20px;
+	background: white;
+	border: 1px dashed var(--borda);
+	border-radius: 10px;
+}
+
+/* cards */
+.cards {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 14px;
+}
+
+.card {
+	background: white;
+	border: 1px solid var(--borda);
+	border-radius: 10px;
+	padding: 16px;
+}
+
+.card p, .card ul {
+	margin: 0 0 8px;
+	color: var(--texto-claro);
+}
+
+.card ul {
+	padding-left: 18px;
+}
+
+.card li {
+	margin-bottom: 6px;
+}
+
+.numero strong {
+	display: block;
+	font-size: 28px;
+	color: var(--verde-escuro);
+}
+
+.numero p {
+	color: var(--texto);
+}
+.imagem.pequena {
+	width: 100%;
+	height: auto;
+	aspect-ratio: 4 / 3;
+	object-fit: cover;
+	margin: 0 0 10px;
+	background: var(--areia);
+	border: none;
+}
+
+/* receitas */
+.busca {
+	width: 100%;
+	margin-bottom: 16px;
+	padding: 10px;
+	font-size: 16px;
+	border: 1px solid var(--borda);
+	border-radius: 6px;
+}
+
+.receitas {
+	margin-top: 16px;
+}
+
+.receitas .cards {
+	grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+}
+
+.filtros {
+	background: white;
+	border: 1px solid var(--borda);
+	border-radius: 10px;
+	padding: 14px;
+	margin-bottom: 16px;
+}
+
+.filtros h2 {
+	font-size: 18px;
+	margin-top: 0;
+}
+
+.filtros p {
+	font-weight: bold;
+	margin: 0 0 6px;
+}
+
+.filtros label {
+	display: block;
+	margin-bottom: 4px;
+}
+
+/* rodapé */
+footer {
+	background: var(--verde-escuro);
+	color: var(--creme);
+	text-align: center;
+	padding: 18px 16px;
+	font-size: 14px;
+}
+
+footer p {
+	margin: 0;
+}
+
+/* telas maiores */
+@media (min-width: 768px) {
+	header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 12px 40px;
+	}
+
+	nav {
+		margin-top: 0;
+	}
+
+	h1 { font-size: 36px; }
+
+	.inicio {
+		display: flex;
+		align-items: center;
+		gap: 30px;
+		padding: 36px;
+	}
+
+	.inicio-texto,
+	.imagem {
+		flex: 1;
+	}
+
+	.imagem {
+		margin-top: 0;
+		height: 220px;
+	}
+
+	.cards {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.receitas {
+		display: flex;
+		gap: 20px;
+		align-items: flex-start;
+	}
+
+	.filtros {
+		width: 180px;
+		flex-shrink: 0;
+		margin-bottom: 0;
+	}
+
+	.lista {
+		flex: 1;
+		min-width: 0;
+	}
+}
+
+@media (min-width: 1000px) {
+	.cards {
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+	.cards.tres {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}

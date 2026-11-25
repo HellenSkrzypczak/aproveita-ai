@@ -1,32 +1,127 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Receitas de aproveitamento | Aproveita Aí</title>
-  <link rel="stylesheet" href="css/style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Receitas de aproveitamento - Aproveita Aí</title>
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <a href="index.html">Aproveita Aí</a>
-    <nav>
-      <a href="index.html">Início</a>
-      <a href="conservacao.html">Conservação</a>
-      <a href="receitas.html">Receitas</a>
-      <a href="onde-doar.html">Onde doar</a>
-      <a href="calculadora.html">Calculadora</a>
-      <a href="sobre.html">Sobre</a>
-    </nav>
-  </header>
 
-  <main>
-    <h1>Receitas de aproveitamento</h1>
-    <!-- TODO: conteúdo da página -->
-  </main>
+	<header>
+		<a class="logo" href="index.html">Aproveita Aí</a>
+		<nav>
+			<a href="index.html">Início</a>
+			<a href="conservacao.html">Conservação</a>
+			<a href="receitas.html" class="ativo">Receitas</a>
+			<a href="onde-doar.html">Onde doar</a>
+			<a href="calculadora.html">Calculadora</a>
+			<a href="sobre.html">Sobre</a>
+		</nav>
+	</header>
 
-  <footer>
-    <p>Projeto acadêmico de Desenvolvimento Web · ODS 12, meta 12.3</p>
-  </footer>
-  <script src="js/receitas.js"></script>
+	<main>
+		<section>
+			<h1>Receitas de aproveitamento</h1>
+
+			<div class="receitas">
+				<aside class="filtros">
+					<h2>Filtros</h2>
+					<p>Ingrediente</p>
+					<label><input type="checkbox"> Cascas</label>
+					<label><input type="checkbox"> Talos</label>
+					<label><input type="checkbox"> Folhas</label>
+					<label><input type="checkbox"> Pão amanhecido</label>
+					<label><input type="checkbox"> Arroz e sobras</label>
+				</aside>
+
+				<div class="lista">
+
+					<input type="text" class="busca" placeholder="Buscar receita ou ingrediente..." aria-label="Buscar receita ou ingrediente">
+
+					<div class="cards">
+
+						<article class="card">
+							<img class="imagem pequena" src="img/bolo-com-casca-de-banana.jpg" alt="Bolo de casca de banana">
+							<h3>Bolo de casca de banana</h3>
+							<p>Cascas</p>
+						</article>
+
+						<article class="card">
+							<img class="imagem pequena" src="img/farofa-de-talos.jpg" alt="Farofa de talos">
+							<h3>Farofa de talos</h3>
+							<p>Talos</p>
+						</article>
+
+						<article class="card">
+							<img class="imagem pequena" src="img/rabanada-de-pao-dormido.jpg" alt="Rabanada de pão dormido">
+							<h3>Rabanada de pão dormido</h3>
+							<p>Pão amanhecido</p>
+						</article>
+
+						<article class="card">
+							<img class="imagem pequena" src="img/bolinho-de-arroz.jpg" alt="Bolinho de arroz">
+							<h3>Bolinho de arroz</h3>
+							<p>Arroz e sobras</p>
+						</article>
+
+						<article class="card">
+							<img class="imagem pequena" src="img/chips-de-casca-de-batata.png" alt="Chips de casca de batata">
+							<h3>Chips de casca de batata</h3>
+							<p>Cascas</p>
+						</article>
+
+						<article class="card">
+							<img class="imagem pequena" src="img/pesto-de-folhas-de-cenoura.jpg" alt="Pesto de folhas de cenoura">
+							<h3>Pesto de folhas de cenoura</h3>
+							<p>Folhas</p>
+						</article>
+
+						<article class="card">
+							<img class="imagem pequena" src="img/refresco-de-casca-de-abacaxi.jpg" alt="Refresco de casca de abacaxi">
+							<h3>Refresco de casca de abacaxi</h3>
+							<p>Cascas</p>
+						</article>
+
+						<article class="card">
+							<img class="imagem pequena" src="img/torta-de-talos-e-sobras.jpg" alt="Torta de talos e sobras">
+							<h3>Torta de talos e sobras</h3>
+							<p>Talos</p>
+						</article>
+
+						<article class="card">
+							<img class="imagem pequena" src="img/bolo-de-casca-de-laranja.jpg" alt="Bolo de casca de laranja">
+							<h3>Bolo de casca de laranja</h3>
+							<p>Cascas</p>
+						</article>
+            
+						<article class="card">
+							<img class="imagem pequena" src="img/bolinho-de-talo-de-brocolis.jpg" alt="Bolinho de talo de brócolis">
+							<h3>Bolinho de talo de brócolis</h3>
+							<p>Talos</p>
+						</article>
+
+						<article class="card">
+							<img class="imagem pequena" src="img/croutons-de-pao-amanhecido.jpg" alt="Croutons de pão amanhecido">
+							<h3>Croutons de pão amanhecido</h3>
+							<p>Pão amanhecido</p>
+						</article>
+
+						<article class="card">
+							<img class="imagem pequena" src="img/refogado-de-folhas-de-beterraba.jpg" alt="Refogado de folhas de beterraba">
+							<h3>Refogado de folhas de beterraba</h3>
+							<p>Folhas</p>
+						</article>
+            
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer>
+		<p>Projeto da disciplina de Desenvolvimento Web - ODS 12, meta 12.3</p>
+	</footer>
+
 </body>
 </html>
